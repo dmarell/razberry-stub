@@ -5,13 +5,33 @@ package se.marell.razberrystub;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 @Data
 @AllArgsConstructor
-class DeviceMetrics {
+abstract class DeviceMetrics {
     private String icon;
     private String title;
+}
+
+@Data
+@EqualsAndHashCode(callSuper = true)
+class DeviceMetricsIntLevel extends DeviceMetrics {
+    public DeviceMetricsIntLevel(String icon, String title, int level) {
+        super(icon, title);
+        this.level = level;
+    }
     private int level;
+}
+
+@Data
+@EqualsAndHashCode(callSuper = true)
+class DeviceMetricsStringLevel extends DeviceMetrics {
+    public DeviceMetricsStringLevel(String icon, String title, String level) {
+        super(icon, title);
+        this.level = level;
+    }
+    private String level;
 }
 
 @Data

@@ -7,6 +7,7 @@
 - Exkludera: Tryck på knappen mer än 6s (eller tryck på S1 5 gånger)
 - Reset av alla parametrar: Tryck på knappen mer än 6s
 
+```
 GET http://rpi0:8083/ZAutomation/api/v1/devices?since=1456268386
 
 {
@@ -906,3 +907,4 @@ GET http://rpi0:8083/ZWaveAPI/Data/1456268352
   },
   "updateTime": 1456292934
 }
+```
