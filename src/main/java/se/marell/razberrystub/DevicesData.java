@@ -16,8 +16,8 @@ abstract class DeviceMetrics {
 
 @Data
 @EqualsAndHashCode(callSuper = true)
-class DeviceMetricsIntLevel extends DeviceMetrics {
-    public DeviceMetricsIntLevel(String icon, String title, int level) {
+class ZWaveDeviceMetricsIntLevel extends DeviceMetrics {
+    public ZWaveDeviceMetricsIntLevel(String icon, String title, int level) {
         super(icon, title);
         this.level = level;
     }
@@ -26,8 +26,8 @@ class DeviceMetricsIntLevel extends DeviceMetrics {
 
 @Data
 @EqualsAndHashCode(callSuper = true)
-class DeviceMetricsStringLevel extends DeviceMetrics {
-    public DeviceMetricsStringLevel(String icon, String title, String level) {
+class ZWaveDeviceMetricsStringLevel extends DeviceMetrics {
+    public ZWaveDeviceMetricsStringLevel(String icon, String title, String level) {
         super(icon, title);
         this.level = level;
     }
@@ -36,7 +36,7 @@ class DeviceMetricsStringLevel extends DeviceMetrics {
 
 @Data
 @AllArgsConstructor
-class DevicesDevice {
+class ZWaveDevice {
     private long creationTime;
     private int creatorId;
     private String deviceType;
@@ -56,7 +56,7 @@ class DevicesDevice {
 @AllArgsConstructor
 public class DevicesData {
     private boolean structureChanged;
-    private DevicesDevice[] devices;
+    private ZWaveDevice[] devices;
     private long updateTime;
     private int code;
     private String message;
